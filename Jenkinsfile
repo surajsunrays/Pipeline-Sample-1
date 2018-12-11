@@ -9,14 +9,7 @@ pipeline{
             {
                 echo "This will execute master branch"
             }
-            when{
-                not{
-                    branch 'master'
-                    {
-                        echo "This will execute non master branch"
-                    }
-                }
-            }
+            
         }
         stage('Validating'){
             steps
