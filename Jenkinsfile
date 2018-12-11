@@ -17,12 +17,12 @@ pipeline{
         stage('Validating'){
             when
             {
-                expression { def res=1+2 }
+                expression { return 1+2 }
             }
             steps
             {
                 echo "Starting Validation Process"
-                println(res)
+                println()
             }
             
         }
