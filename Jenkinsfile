@@ -2,9 +2,12 @@ pipeline{
     agent any
     stages{
         stage('Initiating'){
+            when{
+                branch "master"
+            }
             steps
             {
-                echo "Starting the pipeline process...."
+                echo "Current branch is Master branch...."
             }
             
         }
