@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Initiating'){
             when{
-                echo "This is test message"
+                sh 'echo "This is test message"'
             }
             steps
             {
