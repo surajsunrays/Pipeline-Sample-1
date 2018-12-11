@@ -2,8 +2,10 @@ pipeline{
     agent any
     stages{
         stage('Initiating'){
-            when{
+            when 
+            {
                 branch 'master'
+                beforeAgent true
             }
             steps
             {
