@@ -15,9 +15,14 @@ pipeline{
             
         }
         stage('Validating'){
+            when
+            {
+                experssion { def res=1+2 }
+            }
             steps
             {
                 echo "Starting Validation Process"
+                println(res)
             }
             
         }
