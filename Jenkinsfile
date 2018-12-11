@@ -3,11 +3,11 @@ pipeline{
     stages{
         stage('Initiating'){
             when{
-                branch 'master'
+                echo "This is test message"
             }
             steps
             {
-                echo "This will execute master branch"
+                echo "This will execute master branch ----- Because Test Message is True...."
             }
             
         }
