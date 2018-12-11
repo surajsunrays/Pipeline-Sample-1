@@ -2,14 +2,21 @@ pipeline{
     agent any
     stages{
         stage('Initiating'){
-            when{
-                branch 'master'
-            }
             steps
             {
-                echo "Current branch is Master branch...."
+                script
+                {
+                    if (env.BRANCH_NAME == 'master') 
+                    {
+                        echo 'I only execute on the master branch'
+                    } 
+                    else 
+                    {
+                        echo 'I execute elsewhere'
+                    }
+                }
             }
-            echo "Current branch is not a master Branch"
+              
             
         }
         stage('Validating'){
