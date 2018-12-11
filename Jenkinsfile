@@ -17,7 +17,7 @@ pipeline{
         stage('Validating'){
             when
             {
-                experssion { def res=1+2 }
+                expression { def res=1+2 }
             }
             steps
             {
