@@ -4,8 +4,9 @@ pipeline{
         stage('Initiating'){
             when 
             {
-                branch 'master'
-                beforeAgent true
+                not{
+                    branch 'master'
+                }
             }
             steps
             {
