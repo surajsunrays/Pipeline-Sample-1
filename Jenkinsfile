@@ -2,22 +2,21 @@ pipeline{
     agent any
     stages{
         stage('Initiating'){
+            when{
+                branch 'master'
+            }
             steps
             {
-                script
-                {
-                    if (env.BRANCH_NAME == 'master') 
+                echo "This will execute master branch"
+            }
+            when{
+                not{
+                    branch 'master'
                     {
-                        echo 'I only execute on the master branch'
-                    } 
-                    else 
-                    {
-                        echo 'I execute elsewhere'
+                        echo "This will execute non master branch"
                     }
                 }
             }
-              
-            
         }
         stage('Validating'){
             steps
