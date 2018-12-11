@@ -3,12 +3,13 @@ pipeline{
     stages{
         stage('Initiating'){
             when{
-                branch "master"
+                branch 'master'
             }
             steps
             {
                 echo "Current branch is Master branch...."
             }
+            echo "Current branch is not a master Branch"
             
         }
         stage('Validating'){
